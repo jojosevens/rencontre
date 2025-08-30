@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEOTOKOS - Rencontres Chrétiennes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fdbb2d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #f8f8f8;
+            font-style: italic;
+        }
+        
+        .verse {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-style: italic;
+        }
+        
+        .verse span {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+        
+        .auth-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-primary {
+            background-color: #fdbb2d;
+            color: #1a2a6c;
+        }
+        
+        .btn-primary:hover {
+            background-color: #ffa500;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .feature {
+            flex-basis: 30%;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: #fdbb2d;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #fdbb2d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+            
+            .logo h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+        }
+        
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>THEOTOKOS</h1>
+        </div>
+        
+        <div class="tagline">
+            Site chrétien de rencontres
+        </div>
+        
+        <div class="verse">
+            "L'amour ne passera jamais"
+            <span>1 Corinthiens 13:1-2,3-5</span>
+        </div>
+        
+        <div class="auth-options">
+            <button class="btn btn-primary">
+                <i class="fas fa-user-plus"></i>
+                Créer mon compte
+            </button>
+            
+            <button class="btn btn-secondary">
+                <i class="fas fa-sign-in-alt"></i>
+                Se connecter
+            </button>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-cross"></i>
+                <h3>Communauté Chrétienne</h3>
+                <p>Rencontrez des célibataires partageant votre foi</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                <h3>Relations Sérieuses</h3>
+                <p>Pour construire une relation durable dans le Christ</p>
+            </div>
+            
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Environnement Sûr</h3>
+                <p>Un espace sécurisé pour les rencontres chrétiennes</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>THEOTOKOS © 2023 - Rencontres chrétiennes authentiques</p>
+        </footer>
+    </div>
+
+    <script>
+        // Animation pour les boutons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Simuler une action au clic
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                    alert('Fonctionnalité à implémenter : ' + this.textContent.trim());
+                }, 200);
+            });
+        });
+        
+        // Animation du texte
+        const tagline = document.querySelector('.tagline');
+        setTimeout(() => {
+            tagline.style.transition = 'opacity 1s ease';
+            tagline.style.opacity = 0.8;
+        }, 500);
+    </script>
+</body>
+</html>
