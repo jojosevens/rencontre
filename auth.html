@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THEOTOKOS — Auth</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Connexion / Inscription</h1>
+
+    <section class="auth-box">
+      <h2>Inscription</h2>
+      <input id="su-email" placeholder="Email" type="email">
+      <input id="su-password" placeholder="Mot de passe" type="password">
+      <button id="signup">S'inscrire (Supabase)</button>
+    </section>
+
+    <section class="auth-box">
+      <h2>Connexion</h2>
+      <input id="si-email" placeholder="Email" type="email">
+      <input id="si-password" placeholder="Mot de passe" type="password">
+      <button id="signin">Se connecter (Supabase)</button>
+    </section>
+
+    <section>
+      <p id="status"></p>
+    </section>
+  </div>
+
+  <script src="/assets/supabase-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# .gitignore additions
+
+node_modules/
+.env
+assets/supabase-config.js
+server/node_modules/
