@@ -29,13 +29,19 @@
       <label>Bio<textarea id="pBio"></textarea></label>
       <button type="submit">Enregistrer</button>
     </form>
-    <div id="profileSaved" class="notice" hidden>Profil enregistré localement.</div>
+    <div id="profileSaved" class="notice" hidden>Profil enregistré.</div>
+
+    <div style="margin-top:1rem">
+      <a href="/auth.html">Se connecter / S'inscrire</a>
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="container">THEOTOKOS — Mon profil</div>
   </footer>
 
+  <script src="/assets/supabase-init.js"></script>
+  <script src="/assets/supabase-profile.js"></script>
   <script src="/assets/app.js"></script>
 </body>
 </html>
