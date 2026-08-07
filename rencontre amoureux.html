@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THEOTOKOS - Rencontres Chrétiennes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous">
     <style>
         * {
             margin: 0;
@@ -18,11 +17,12 @@
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #fff;
+            padding: 20px;
         }
         
         @keyframes gradient {
@@ -59,21 +59,27 @@
             margin-bottom: 30px;
             color: #f8f8f8;
             font-style: italic;
+            opacity: 0.95;
         }
         
         .verse {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 30px;
             padding: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.06);
             border-radius: 10px;
             font-style: italic;
         }
         
-        .verse span {
+        .verse blockquote {
+            margin: 0;
+        }
+        
+        .verse cite {
             display: block;
             margin-top: 10px;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.85);
         }
         
         .auth-options {
@@ -87,7 +93,7 @@
             padding: 15px;
             border-radius: 50px;
             border: none;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -95,6 +101,12 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+            background-clip: padding-box;
+        }
+        
+        .btn:focus {
+            outline: 3px solid rgba(253,187,45,0.4);
+            outline-offset: 2px;
         }
         
         .btn-primary {
@@ -115,7 +127,7 @@
         }
         
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.08);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
@@ -172,76 +184,77 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">
+    <main class="container" role="main">
+        <header class="logo" aria-hidden="false">
             <h1>THEOTOKOS</h1>
-        </div>
+        </header>
         
-        <div class="tagline">
-            Site chrétien de rencontres
-        </div>
+        <p class="tagline">Site chrétien de rencontres</p>
         
-        <div class="verse">
-            "L'amour ne passera jamais"
-            <span>1 Corinthiens 13:1-2,3-5</span>
-        </div>
+        <section class="verse" aria-label="Verset biblique">
+            <blockquote>« L'amour ne passera jamais. »</blockquote>
+            <cite>1 Corinthiens 13:1-5</cite>
+        </section>
         
-        <div class="auth-options">
-            <button class="btn btn-primary">
-                <i class="fas fa-user-plus"></i>
-                Créer mon compte
+        <nav class="auth-options" aria-label="Options d'authentification">
+            <button type="button" class="btn btn-primary" aria-label="Créer mon compte">
+                <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                <span>Créer mon compte</span>
             </button>
             
-            <button class="btn btn-secondary">
-                <i class="fas fa-sign-in-alt"></i>
-                Se connecter
+            <button type="button" class="btn btn-secondary" aria-label="Se connecter">
+                <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i>
+                <span>Se connecter</span>
             </button>
-        </div>
+        </nav>
         
-        <div class="features">
+        <section class="features" aria-label="Fonctionnalités">
             <div class="feature">
-                <i class="fas fa-cross"></i>
+                <i class="fa-solid fa-cross" aria-hidden="true"></i>
                 <h3>Communauté Chrétienne</h3>
                 <p>Rencontrez des célibataires partageant votre foi</p>
             </div>
             
             <div class="feature">
-                <i class="fas fa-heart"></i>
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
                 <h3>Relations Sérieuses</h3>
                 <p>Pour construire une relation durable dans le Christ</p>
             </div>
             
             <div class="feature">
-                <i class="fas fa-shield-alt"></i>
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
                 <h3>Environnement Sûr</h3>
                 <p>Un espace sécurisé pour les rencontres chrétiennes</p>
             </div>
-        </div>
+        </section>
         
         <footer>
             <p>THEOTOKOS © 2023 - Rencontres chrétiennes authentiques</p>
         </footer>
-    </div>
+    </main>
 
     <script>
         // Animation pour les boutons
         document.querySelectorAll('.btn').forEach(button => {
             button.addEventListener('click', function() {
-                // Simuler une action au clic
+                // Animation visuelle
                 this.style.transform = 'scale(0.95)';
                 setTimeout(() => {
                     this.style.transform = '';
-                    alert('Fonctionnalité à implémenter : ' + this.textContent.trim());
+                    // Remplacer alert par un console.log pour un meilleur UX en prod
+                    console.log('Fonctionnalité à implémenter : ' + this.textContent.trim());
                 }, 200);
             });
         });
         
         // Animation du texte
         const tagline = document.querySelector('.tagline');
-        setTimeout(() => {
-            tagline.style.transition = 'opacity 1s ease';
-            tagline.style.opacity = 0.8;
-        }, 500);
+        if (tagline) {
+            setTimeout(() => {
+                tagline.style.transition = 'opacity 1s ease';
+                tagline.style.opacity = 0.9;
+            }, 500);
+        }
     </script>
 </body>
 </html>
