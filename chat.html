@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THEOTOKOS — Discuter</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html">THEOTOKOS</a>
+      <nav class="main-nav">
+        <a href="/index.html">Accueil</a>
+        <a href="/chat.html">Discuter</a>
+        <a href="/sermons.html">Messages</a>
+        <a href="/bible.html">Lire la Bible</a>
+        <a href="/profile.html">Mon profil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Salons de discussion</h1>
+
+    <div class="chat-layout">
+      <aside class="rooms">
+        <div class="room-controls">
+          <input id="newRoom" placeholder="Créer un salon (ex: Foi)" />
+          <button id="createRoom">Créer</button>
+        </div>
+        <ul id="roomList"></ul>
+      </aside>
+
+      <section class="chat-area">
+        <header class="chat-header">
+          <h2 id="roomTitle">Sélectionnez un salon</h2>
+        </header>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="author" placeholder="Votre prénom" required />
+          <input id="message" placeholder="Écrire un message..." required />
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">THEOTOKOS — Salons publics</div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

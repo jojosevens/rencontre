@@ -1,0 +1,39 @@
+/* Basic shared styles for THEOTOKOS multi-page site */
+:root{--primary:#fdbb2d;--accent:#ff6b9d;--dark:#1a2a6c;--bg:#f5f7fb}
+*{box-sizing:border-box}
+body{font-family:Montserrat,Arial,Helvetica,sans-serif;margin:0;color:#222;background:linear-gradient(180deg,#fff,#f3f5f8)}
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+.site-header{background:var(--dark);color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.brand{color:var(--primary);font-weight:700;text-decoration:none;font-size:1.2rem}
+.main-nav a{color:#fff;margin-left:1rem;text-decoration:none}
+.hero{padding:4rem 2rem;text-align:center;background:linear-gradient(90deg,rgba(253,187,45,0.06),rgba(255,107,157,0.03));border-bottom:1px solid rgba(0,0,0,0.05)}
+.hero h1{font-size:2rem;margin-bottom:.5rem}
+.btn{display:inline-block;padding:.8rem 1.2rem;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.05);text-decoration:none;color:var(--dark);margin-right:.5rem}
+.btn.primary{background:linear-gradient(90deg,var(--primary),#ffa500);color:#1a2a6c;font-weight:700}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.features article{background:#fff;padding:1rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.05)}
+.site-footer{background:var(--dark);color:#fff;padding:1rem;margin-top:2rem;text-align:center}
+
+/* Chat styles */
+.chat-layout{display:flex;gap:1rem}
+.rooms{width:260px}
+.rooms input{width:100%;padding:.5rem;margin-bottom:.5rem}
+#roomList{list-style:none;padding:0}
+#roomList li{padding:.5rem;background:#fff;border-radius:6px;margin-bottom:.5rem;cursor:pointer}
+.chat-area{flex:1;display:flex;flex-direction:column}
+.messages{height:400px;overflow:auto;padding:1rem;background:#fff;border-radius:8px;margin-bottom:.5rem}
+.chat-form{display:flex;gap:.5rem}
+.chat-form input{flex:1;padding:.6rem}
+.chat-form button{padding:.6rem 1rem}
+
+/* Bible */
+.bible-controls{display:flex;gap:.5rem;align-items:center;margin-bottom:1rem}
+.bible-text{background:#fff;padding:1rem;border-radius:8px;min-height:200px}
+
+/* Profile */
+.profile-form{display:grid;gap:.6rem}
+.profile-form input,.profile-form textarea{padding:.6rem;border-radius:6px;border:1px solid #ddd}
+.notice{margin-top:1rem;padding:.6rem;background:linear-gradient(90deg,var(--primary),#ffa500);color:#082849;border-radius:6px}
+
+@media(max-width:800px){.chat-layout{flex-direction:column}.rooms{width:100%}.main-nav{display:none;padding-top:.5rem}}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THEOTOKOS — Mon profil</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/index.html">THEOTOKOS</a>
+      <nav class="main-nav">
+        <a href="/index.html">Accueil</a>
+        <a href="/chat.html">Discuter</a>
+        <a href="/sermons.html">Messages</a>
+        <a href="/bible.html">Lire la Bible</a>
+        <a href="/profile.html">Mon profil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Mon profil</h1>
+    <form id="profileForm" class="profile-form">
+      <label>Prénom<input id="pFirst" placeholder="Prénom"></label>
+      <label>Nom<input id="pLast" placeholder="Nom"></label>
+      <label>Âge<input id="pAge" type="number" min="18"></label>
+      <label>Bio<textarea id="pBio"></textarea></label>
+      <button type="submit">Enregistrer</button>
+    </form>
+    <div id="profileSaved" class="notice" hidden>Profil enregistré localement.</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">THEOTOKOS — Mon profil</div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
